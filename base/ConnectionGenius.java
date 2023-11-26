@@ -3,35 +3,85 @@ package base;
 import java.net.InetAddress;
 
 /**
- * @author Kevan Buckley, maintained by __student
- * @version 2.0, 2014
+ * The ConnectionGenius class represents a game connection manager. It handles
+ * downloading the web version, connecting to the web service, and initiating
+ * gameplay.
+ * 
+ * Author: Kevan Buckley, maintained by __student Version: 2.0, 2014
  */
 
 public class ConnectionGenius {
 
-	InetAddress ipa;
+	// The IP address for the game connection
+	private InetAddress ipa;
 
+	/**
+	 * Constructs a ConnectionGenius object with the specified IP address.
+	 * 
+	 * @param ipa The InetAddress representing the IP address for the game
+	 *            connection.
+	 */
 	public ConnectionGenius(InetAddress ipa) {
-		this.ipa = ipa;
+		this.setIpa(ipa);
 	}
 
+	/**
+	 * Initiates the game by downloading the web version, connecting to the web
+	 * service, and starting gameplay.
+	 */
 	public void fireUpGame() {
 		downloadWebVersion();
 		connectToWebService();
 		awayWeGo();
 	}
 
+	/**
+	 * Downloads the specialized web version for the game.
+	 */
 	public void downloadWebVersion() {
-		System.out.println("Getting specialised web version.");
-		System.out.println("Wait a couple of moments");
+		printMessage("Getting specialised web version.");
+		printMessage("Wait a couple of moments");
 	}
 
+	/**
+	 * Connects to the web service required for the game.
+	 */
 	public void connectToWebService() {
-		System.out.println("Connecting");
+		printMessage("Connecting");
 	}
 
+	/**
+	 * Indicates that the game is ready to play.
+	 */
 	public void awayWeGo() {
-		System.out.println("Ready to play");
+		printMessage("Ready to play");
+	}
+
+	/**
+	 * Prints a message to the console.
+	 * 
+	 * @param message The message to be printed.
+	 */
+	private void printMessage(String message) {
+		System.out.println(message);
+	}
+
+	/**
+	 * Gets the IP address associated with the game connection.
+	 * 
+	 * @return The InetAddress representing the IP address.
+	 */
+	InetAddress getIpa() {
+		return ipa;
+	}
+
+	/**
+	 * Sets the IP address for the game connection.
+	 * 
+	 * @param ipa The InetAddress representing the IP address to be set.
+	 */
+	void setIpa(InetAddress ipa) {
+		this.ipa = ipa;
 	}
 
 }
