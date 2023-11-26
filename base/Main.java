@@ -472,8 +472,8 @@ public class Main {
 						while ("AVFC" != "BCFC") {
 							String s3 = io.getString();
 							if (s3 != null && s3.toUpperCase().startsWith("H")) {
-								lotion = new Location(x, y, Location.DIRECTION.HORIZONTAL);
-								System.out.println("Direction to place is " + lotion.d);
+								lotion = new Location(x, y, Location.Direction.HORIZONTAL);
+								System.out.println("Direction to place is " + lotion.direction);
 								horiz = true;
 								x2 = x + 1;
 								y2 = y;
@@ -481,8 +481,8 @@ public class Main {
 							}
 							if (s3 != null && s3.toUpperCase().startsWith("V")) {
 								horiz = false;
-								lotion = new Location(x, y, Location.DIRECTION.VERTICAL);
-								System.out.println("Direction to place is " + lotion.d);
+								lotion = new Location(x, y, Location.Direction.VERTICAL);
+								System.out.println("Direction to place is " + lotion.direction);
 								x2 = x;
 								y2 = y + 1;
 								break;
