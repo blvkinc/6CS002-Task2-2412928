@@ -3,17 +3,20 @@ package base;
 /**
  * Represents a domino tile with two numbers.
  * 
+ * This class encapsulates the behavior and properties of a domino tile.
+ * It includes methods for placement, inversion, comparison, and string representation.
+ * 
  * @author Kevan Buckley, maintained by __student
  * @version 2.0, 2014
  */
 public class Domino implements Comparable<Domino> {
-    public int high;
-    public int low;
-    public int hx;
-    public int hy;
-    public int lx;
-    public int ly;
-    public boolean placed = false;
+    private int high;
+    private int low;
+    private int hx;
+    private int hy;
+    private int lx;
+    private int ly;
+    private boolean placed = false;
 
     /**
      * Constructor for creating a domino with given high and low values.
@@ -29,10 +32,10 @@ public class Domino implements Comparable<Domino> {
     /**
      * Places the domino on the board at specified coordinates.
      * 
-     * @param hx x-coordinate for the higher value
-     * @param hy y-coordinate for the higher value
-     * @param lx x-coordinate for the lower value
-     * @param ly y-coordinate for the lower value
+     * @param higherX x-coordinate for the higher value
+     * @param higherY y-coordinate for the higher value
+     * @param lowerX  x-coordinate for the lower value
+     * @param lowerY  y-coordinate for the lower value
      */
     public void place(int higherX, int higherY, int lowerX, int lowerY) {
         this.hx = higherX;
@@ -91,6 +94,64 @@ public class Domino implements Comparable<Domino> {
      */
     public boolean isHorizontal() {
         return hy == ly;
+    }
+
+    // Getter and Setter methods for private fields
+
+    public int getHigh() {
+        return high;
+    }
+
+    public void setHigh(int high) {
+        this.high = high;
+    }
+
+    public int getLow() {
+        return low;
+    }
+
+    public void setLow(int low) {
+        this.low = low;
+    }
+
+    public int getHx() {
+        return hx;
+    }
+
+    public void setHx(int hx) {
+        this.hx = hx;
+    }
+
+    public int getHy() {
+        return hy;
+    }
+
+    public void setHy(int hy) {
+        this.hy = hy;
+    }
+
+    public int getLx() {
+        return lx;
+    }
+
+    public void setLx(int lx) {
+        this.lx = lx;
+    }
+
+    public int getLy() {
+        return ly;
+    }
+
+    public void setLy(int ly) {
+        this.ly = ly;
+    }
+
+    public boolean isPlaced() {
+        return placed;
+    }
+
+    public void setPlaced(boolean placed) {
+        this.placed = placed;
     }
 
     /**

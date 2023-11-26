@@ -9,13 +9,16 @@ import java.io.InputStreamReader;
 /**
  * Represents a location on a grid.
  * 
+ * This class defines properties and methods for a location on a grid.
+ * It includes methods for drawing grid lines and obtaining integer input.
+ * 
  * @author Kevan Buckley, maintained by __student
  * @version 2.0, 2014
  */
 public class Location extends SpacePlace {
-    public int column;
-    public int row;
-    public Direction direction;
+    private int column;
+    private int row;
+    private Direction direction;
 
     public enum Direction {
         VERTICAL, HORIZONTAL
@@ -58,7 +61,34 @@ public class Location extends SpacePlace {
                 return Integer.parseInt(reader.readLine());
             } catch (IOException | NumberFormatException e) {
                 // Handle or log the exception
+                System.out.println("Please enter a valid integer.");
             }
         } while (true);
+    }
+
+    // Getters and setters for private fields
+
+    public int getColumn() {
+        return column;
+    }
+
+    public void setColumn(int column) {
+        this.column = column;
+    }
+
+    public int getRow() {
+        return row;
+    }
+
+    public void setRow(int row) {
+        this.row = row;
+    }
+
+    public Direction getDirection() {
+        return direction;
+    }
+
+    public void setDirection(Direction direction) {
+        this.direction = direction;
     }
 }
