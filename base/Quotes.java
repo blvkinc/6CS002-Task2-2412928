@@ -4,7 +4,7 @@ package base;
  * The {@code QuoteContent} class represents a collection of quotes with their
  * object.
  */
-public class QuoteContent {
+public class Quotes {
 	// The array of strings holding quote and author information
 	static transient String[] stuff = { "Progress comes from the intelligent use of experience.", "Elbert Hubbard", "",
 			"No amount of experimentation can ever prove me right; a single experiment can prove me wrong.",
